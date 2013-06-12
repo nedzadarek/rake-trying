@@ -1,0 +1,1 @@
+I'm more or less following this: http://www.stuartellis.eu/articles/rake/#installing-rake
