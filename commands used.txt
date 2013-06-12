@@ -41,3 +41,6 @@ changed name of duplicated task - that task that require itself
 
 
 #add defaults, without it, task returns nil(s) if argument is not passed
+
+
+#adds 'deafault' task with additional block(you don't have to add do..end block)
