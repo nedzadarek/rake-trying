@@ -1,3 +1,8 @@
 #using with option '-f filename' because file is not named: rakefile, Rakefile, rakefile.rb, Rakefile.rb
 
 rake -f some_file.rake other_task
+
+#when using here, we don't put colons(:) before name of tasks
+#we don't need to use '-f' because task is defined in one of default-named file(rakefile.rb)
+#usage: rake task_name
+rake first
