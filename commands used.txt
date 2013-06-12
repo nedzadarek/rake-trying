@@ -1,0 +1,3 @@
+#using with option '-f filename' because file is not named: rakefile, Rakefile, rakefile.rb, Rakefile.rb
+
+rake -f some_file.rake other_task
