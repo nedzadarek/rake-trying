@@ -21,6 +21,7 @@ end
 
 desc 'It will run '
 task :args_task, [:first_arg, :second_arg] => ["need_preqs"] do |t, args|
+	args.with_defaults( first_arg: :hello, second_arg: :bye)
 	puts "I run |need_preqs| task!"
 	puts "and here I will show you that #{args.first_arg} is #{args.second_arg}"
 end
