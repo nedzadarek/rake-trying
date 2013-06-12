@@ -20,3 +20,15 @@ I run every preqs #from task need_preqs
 #rake taskname[arg1,arg2,...]
 #no spaces aside rake AND task_name
 rake args_task[2,4]
+
+
+
+//dependency_loop branch
+#after changing name of last task[args_task] to "need_preqs", last task was added at the end of need_preqs. In the end this task want to run itself.
+I'm needed!
+I'm needed too!
+rake aborted!
+Circular dependency detected: TOP => need_preqs => need_preqs
+
+Tasks: TOP => need_preqs
+(See full trace by running task with --trace)
