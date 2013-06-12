@@ -6,3 +6,11 @@ rake -f some_file.rake other_task
 #we don't need to use '-f' because task is defined in one of default-named file(rakefile.rb)
 #usage: rake task_name
 rake first
+
+
+#it will run prerequisites before itself
+rake need_preqs
+I'm needed! #from task: preq1
+I'm needed too! #from task preq2
+I run every preqs #from task need_preqs
+
