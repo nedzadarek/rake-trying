@@ -14,3 +14,9 @@ I'm needed! #from task: preq1
 I'm needed too! #from task preq2
 I run every preqs #from task need_preqs
 
+
+
+#|args_task| takes 2 arguments[any type] and shows it to user
+#rake taskname[arg1,arg2,...]
+#no spaces aside rake AND task_name
+rake args_task[2,4]

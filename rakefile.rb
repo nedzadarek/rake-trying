@@ -18,3 +18,9 @@ desc 'Task that need preq1 and preq2'
 task :need_preqs => ["preq1", "preq2"] do
 	puts "I run every preqs"
 end
+
+desc 'It will run '
+task :args_task, [:first_arg, :second_arg] => ["need_preqs"] do |t, args|
+	puts "I run |need_preqs| task!"
+	puts "and here I will show you that #{args.first_arg} is #{args.second_arg}"
+end
