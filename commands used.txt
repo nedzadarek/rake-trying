@@ -32,3 +32,7 @@ Circular dependency detected: TOP => need_preqs => need_preqs
 
 Tasks: TOP => need_preqs
 (See full trace by running task with --trace)
+
+
+//dependency_loop branch
+changed name of duplicated task - that task that require itself
