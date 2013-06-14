@@ -44,3 +44,7 @@ changed name of duplicated task - that task that require itself
 
 
 #adds 'deafault' task with additional block(you don't have to add do..end block)
+
+
+#invoke method takes argguments as normal ruby method
+rake invoke_me[4,3]

@@ -29,3 +29,10 @@ end
 task :default => ["first"] do
 	puts "... and I'm called from 'deafault' task"
 end
+
+desc 'example task with invoke'
+task :invoke_me, [:f, :s] do |t, args|
+	puts 'some text before invocation'
+	Rake::Task[:args_task].invoke args.f, args.s
+	puts 'some text after invocation'
+end
