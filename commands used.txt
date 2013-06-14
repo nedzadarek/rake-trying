@@ -48,3 +48,14 @@ changed name of duplicated task - that task that require itself
 
 #invoke method takes argguments as normal ruby method
 rake invoke_me[4,3]
+
+
+#directory create folder with the same name as his argument
+rake ".lol"
+#mkdir -p .lol
+
+#file-> like task can be included[as prerequisite]
+
+#clean/clobber ->build in rake cleaning tools
+rake clean
+rake clobber

@@ -36,3 +36,21 @@ task :invoke_me, [:f, :s] do |t, args|
 	Rake::Task[:args_task].invoke args.f, args.s
 	puts 'some text after invocation'
 end
+
+file 'mydoc.xml'  do
+  puts 'done xml'
+end
+file 'mydoc.xslt'do
+  puts 'done xslt'
+end
+file 'mydoc.pdf' => ['mydoc.xml', 'mydoc.xslt'] do
+  puts 'done'
+end
+
+directory ".lol"
+
+my_files = FileList['build/*.html', 'index.xml']
+
+require 'rake/clean'
+CLEAN.include('*.xxx')
+CLOBBER.include('h/*')
