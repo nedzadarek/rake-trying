@@ -69,3 +69,9 @@ desc 'move index2.txt to same place changing name to index.txt'
 task :move_file do
   mv 'index2.txt', File.join('b','index.txt'), :verbose => true
 end
+
+desc 'taking enviroment variables'
+task :var do
+	puts ENV['HOME']
+	puts ENV['GOROOT']
+end

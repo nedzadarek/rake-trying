@@ -71,3 +71,7 @@ rake copy_file
 #'b' folder & source file must exist
 #mv source, destination, options =?
 rake move_file
+
+
+#display 2 enviroment variables
+rake var
