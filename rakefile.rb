@@ -37,16 +37,21 @@ task :invoke_me, [:f, :s] do |t, args|
 	puts 'some text after invocation'
 end
 
+desc 'mydoc.xml'
 file 'mydoc.xml'  do
   puts 'done xml'
 end
+
+desc 'mydoc.xslt'
 file 'mydoc.xslt'do
   puts 'done xslt'
 end
+desc 'mydoc.pdf'
 file 'mydoc.pdf' => ['mydoc.xml', 'mydoc.xslt'] do
   puts 'done'
 end
 
+desc 'create .lol directory'
 directory ".lol"
 
 my_files = FileList['build/*.html', 'index.xml']
@@ -54,3 +59,13 @@ my_files = FileList['build/*.html', 'index.xml']
 require 'rake/clean'
 CLEAN.include('*.xxx')
 CLOBBER.include('h/*')
+
+desc 'copy file \'copy_me.txt\' to build folder'
+task :copy_file do
+  cp('copy_me.txt', File.join('build','copy_me.txt'), :verbose => true)
+end
+
+desc 'move index2.txt to same place changing name to index.txt'
+task :move_file do
+  mv 'index2.txt', File.join('b','index.txt'), :verbose => true
+end

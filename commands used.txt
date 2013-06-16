@@ -59,3 +59,15 @@ rake ".lol"
 #clean/clobber ->build in rake cleaning tools
 rake clean
 rake clobber
+
+
+#copy file 'copy_me.txt' to /build/copy_me.txt'
+# 'build' folder and source file must exist!
+#File#join returns a new string formed by joining the strings using File::SEPARATOR("/" on windows xp)
+#cp source, destination, options =?
+rake copy_file
+
+#move 'index2.txt' to 'b/index.txt'
+#'b' folder & source file must exist
+#mv source, destination, options =?
+rake move_file
