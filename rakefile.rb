@@ -75,3 +75,17 @@ task :var do
 	puts ENV['HOME']
 	puts ENV['GOROOT']
 end
+
+namespace 'build' do
+
+	desc 'some task in "build" namespace'
+	task :some_task do
+		puts 'hello, I\'m task from `build` namespace'
+	end
+end
+
+desc 'task using namespace\'s task'
+task :nam_task do
+	Rake::Task['build:some_task'].invoke
+	puts 'done running task from ~~build~~ namespace'
+end

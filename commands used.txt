@@ -75,3 +75,12 @@ rake move_file
 
 #display 2 enviroment variables
 rake var
+
+
+#create task in namespace: build
+rake build:some_task
+
+#to invoke task from other namespace make string: 'namespace:task_name'
+#'build:some_task'
+#same as in prerequisites
+rake name_task
